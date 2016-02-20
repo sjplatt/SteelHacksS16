@@ -14,12 +14,17 @@
             </div>
         </header>
 
-        <section class="main">
-            <table class="tableoption">
-                <tr>
-                    <td><a href="{{ url_for('time_frame') }}">Make My Day</a></td>
-                </tr>
-            </table>
+        <section>
+
+
+            Start Time: <select name="time_frame">
+              <option value="{{time_start}}">{{time_start}}</option>
+            </select>  
+
+            End Time: <select name="time_frame">
+              <option value="{{time_end}}">{{time_end}}</option>
+            </select>     
+
         </section>
 
     </body>
