@@ -1,0 +1,25 @@
+<html>
+    <head>
+        <title>FUBER</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename = 'style.css') }}">
+        <link rel="shortcut icon" href="{{ url_for('static', filename = 'icon.png') }}">
+    </head>
+    <body>
+
+        <header>
+            <div>
+                <span class="title">
+                <a href="{{ url_for('home') }}">
+                    FUBER
+                </a>
+                </span>
+            </div>
+        </header>
+
+        <section class="description" id="how-it-works">
+            <p class="title">How it works</p>
+            <image src="{{ url_for('static',filename='whatwedo.png') }}">
+        </section>
+        <img class="splash" src="{{ url_for('static', filename='bgimage.jpg') }}">
+    </body>
+</html>
