@@ -55,11 +55,9 @@
     <div>
     <b>Start:</b>
     <select id="start">
-      <option value="Halifax, NS">Halifax, NS</option>
-      <option value="Boston, MA">Boston, MA</option>
-      <option value="New York, NY">New York, NY</option>
-      <option value="Miami, FL">Miami, FL</option>
-      <option value="Vancouver, BC">Vancouver, BC</option>
+    <% for val in locations%>
+      <option value="val">Halifax, NS</option>
+    <% endfor %>
     </select>
     <br>
     <b>Waypoints:</b> <br>
@@ -141,7 +139,7 @@ function calculateAndDisplayRoute(directionsService, directionsDisplay) {
 }
 
     </script>
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-a1pdWtKcnGBVQ23H2LbZTUl4xddfe60&signed_in=true&callback=initMap"
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB-a1pdWtKcnGBVQs23H2LbZTUl4xddfe60&signed_in=true&callback=initMap"
         async defer></script>
   </body>
 </html>
