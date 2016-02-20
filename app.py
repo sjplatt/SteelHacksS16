@@ -14,9 +14,22 @@ def writeFile(path, contents):
     with open(path, "at") as f:
         f.write(contents)
 
+# import googlemaps
+
+# def distance(firstLocation, secondLocation):
+#     """Uses google maps API to return distance"""
+#     gmaps = googlemaps.Client(key="AIzaSyBDIfU8m6p93dfOUEB8S1b_PHEQ3JRg-go")
+#     matrix = gmaps.distance_matrix(firstLocation, secondLocation)
+#     return matrix['rows'][0]['elements'][0]['duration']['text']
+
 @app.route('/')
 def home():
-    return render_template('index.html')
+    return render_template('maps.html')
+
+@app.route('/maps')
+def maps():
+    locations = ["ABC","PQR","Name"]
+    return render_template('maps.html', locations)
 
 if __name__ == '__main__':
     app.run(debug=True)
